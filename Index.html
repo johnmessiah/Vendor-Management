@@ -315,11 +315,94 @@ details.u-login[open] summary { border-bottom: 1px solid var(--n9); background: 
 .sm-r { color: #DC2626; font-weight: 600; }
 .sm-y { color: #B45309; font-weight: 600; }
 
+/* Override layer */
+body{background:var(--bg);zoom:var(--app-zoom,1)}
+body.theme-dark{
+  --bg:#0f172a;--card:#111827;--nav:#020617;--nav2:#0f172a;
+  --n:#f8fafc;--n2:#e2e8f0;--n3:#cbd5e1;--n4:#94a3b8;--n5:#94a3b8;
+  --n6:#64748b;--n7:#334155;--n8:#1e293b;--n9:#0f172a;--n10:#020617;
+}
+body[data-font="Poppins"]{font-family:'Poppins',sans-serif}
+body[data-font="Montserrat"]{font-family:'Montserrat',sans-serif}
+body[data-font="Lato"]{font-family:'Lato',sans-serif}
+body[data-font="Merriweather"]{font-family:'Merriweather',serif}
+#loginPage{background:radial-gradient(circle at top left,#dbeafe 0%,#f8fafc 38%,#eef2ff 100%)}
+.lp-card{max-width:920px}
+.lp-r{background:linear-gradient(145deg,#dbeafe 0%,#e0e7ff 48%,#f5f3ff 100%);color:var(--n)}
+.lp-r-pill{background:#ffffff;border-color:#dbeafe;color:#312e81}
+.lp-r p{opacity:1;color:var(--n4)}
+.lp-feat-ic{background:#ffffff;border:1px solid #dbeafe}
+.lp-btn{background:#111827}
+.lp-btn:hover{background:#1f2937}
+.sb-toggle-mid{right:-16px;top:auto;bottom:132px;width:32px;height:58px;border-radius:0 16px 16px 0;background:#111827;color:#fff;border:1px solid rgba(255,255,255,.06);box-shadow:0 10px 24px rgba(2,6,23,.35)}
+.sb-toggle-mid:hover{background:#1f2937;color:#fff;transform:none}
+.sidebar.collapsed .sb-toggle-mid{right:-14px}
+.sidebar.collapsed .sb-toggle-mid svg{transform:rotate(180deg)}
+.mbody{max-height:82vh}
+.modal-box{max-width:1380px}
+.modal-box.form-modal{max-width:1420px}
+.table-actions{margin-left:auto;display:flex;gap:8px}
+.scroll-btn{width:30px;height:30px;border:1px solid var(--n8);background:#fff;border-radius:8px;color:var(--n3);cursor:pointer}
+.scroll-btn:hover{background:var(--n9)}
+.tbl-wrap{scroll-behavior:smooth}
+.sticky-col{position:sticky;background:var(--card);z-index:2}
+th.sticky-col{z-index:4;background:#FAFBFC}
+.sticky-col-1{left:0}
+.sticky-col-2{left:42px}
+.sticky-col-3{left:118px}
+.sticky-col-4{left:208px}
+.sticky-col-5{left:298px}
+.bulk-grid,.mail-grid,.report-grid,.settings-grid{display:grid;gap:16px}
+.bulk-grid{grid-template-columns:340px 1fr}
+.bulk-list{border:1px solid var(--n8);border-radius:16px;overflow:hidden}
+.bulk-row{display:grid;grid-template-columns:180px 140px 1fr;gap:12px;padding:14px 16px;border-top:1px solid var(--n8);align-items:start}
+.bulk-row:first-child{border-top:none}
+.bulk-name{font-weight:700}
+.bulk-status{display:flex;flex-direction:column;gap:8px}
+.bulk-meta{font-size:11px;color:var(--n5)}
+.loading-pill{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:var(--p);font-weight:600}
+.loading-dot{width:8px;height:8px;border-radius:50%;background:var(--p);animation:pulse 1s infinite ease-in-out}
+@keyframes pulse{0%,100%{opacity:.3;transform:scale(.9)}50%{opacity:1;transform:scale(1.1)}}
+.field-inline{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.step-card{border:1px solid var(--n8);border-radius:18px;background:var(--card);overflow:hidden}
+.step-head{padding:16px 18px;border-bottom:1px solid var(--n8);display:flex;justify-content:space-between;align-items:center}
+.step-body{padding:18px}
+.mapping-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.mapping-row{display:grid;grid-template-columns:1fr 24px 1fr;gap:10px;align-items:center}
+.dropzone{border:2px dashed #cbd5e1;border-radius:18px;padding:32px;text-align:center;background:linear-gradient(180deg,#ffffff,#f8fafc)}
+.dropzone input{display:none}
+.import-tabs{display:flex;gap:8px;margin-bottom:14px}
+.import-tab{padding:9px 14px;border:1px solid var(--n8);border-radius:999px;background:var(--n9);cursor:pointer;font-size:12px;font-weight:600}
+.import-tab.active{background:var(--p-lt);border-color:var(--p);color:var(--p)}
+.validation-list{background:#fff7ed;border:1px solid #fdba74;border-radius:14px;padding:14px 16px;color:#9a3412;font-size:12px}
+.hint-box{padding:12px 14px;background:var(--n9);border:1px solid var(--n8);border-radius:12px;font-size:12px;color:var(--n4)}
+.req-breakdown{display:flex;flex-wrap:wrap;gap:8px}
+.req-chip{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;background:var(--p-lt);border:1px solid var(--p-lt2);border-radius:999px;font-size:11px;font-weight:600;color:var(--p)}
+.req-skill{max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.req-skill:hover{white-space:normal}
+.report-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.report-card,.settings-card{background:var(--card);border:1px solid var(--n8);border-radius:18px;padding:18px;box-shadow:var(--sh)}
+.report-table .rate{font-weight:700;color:var(--p)}
+.settings-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.zoom-badge{padding:6px 10px;border-radius:999px;background:var(--n9);font-size:12px}
+.compose-shell{border:1px solid var(--n8);border-radius:18px;overflow:hidden;background:var(--card)}
+.compose-line{display:grid;grid-template-columns:60px 1fr;gap:12px;padding:12px 16px;border-bottom:1px solid var(--n8);align-items:center}
+.compose-line:last-child{border-bottom:none}
+.compose-line input{border:none;outline:none;background:transparent;font-size:13px}
+.compose-body{padding:18px;min-height:250px;background:linear-gradient(180deg,#fff,#f8fafc)}
+.compose-preview{border:1px solid var(--n8);border-radius:14px;padding:16px;background:#fff;font-size:13px;line-height:1.65}
+.wf-field{max-width:260px}
+.inline-tool{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}
+.hidden{display:none!important}
+
 @media(max-width:768px){
   .lp-card{flex-direction:column}.lp-r{display:none}
   .sidebar{position: absolute; height: 100%; z-index: 200; transform: translateX(-100%);}
   .sidebar.mobile-open { transform: translateX(0); }
   .pg-wrap{padding:20px 16px}
+  .bulk-grid,.mapping-grid,.settings-grid,.report-grid{grid-template-columns:1fr}
+  .bulk-row,.compose-line{grid-template-columns:1fr}
+  .sticky-col,.sticky-col-1,.sticky-col-2,.sticky-col-3,.sticky-col-4,.sticky-col-5{position:static}
 }
 </style>
 </head>
@@ -334,7 +417,7 @@ details.u-login[open] summary { border-bottom: 1px solid var(--n9); background: 
       </div>
       <div class="lp-copy">
         <h1>Welcome<br>Back.</h1>
-        <p>Sign in to manage your vendor pipeline, interviews, training and certification — all in one place.</p>
+        <p>Sign in to manage your vendor pipeline, interviews, training, certification and working from tracking in one place.</p>
       </div>
       <div style="display:flex;flex-direction:column;gap:12px">
         <div id="lpErr" class="lp-err"></div>
@@ -350,13 +433,13 @@ details.u-login[open] summary { border-bottom: 1px solid var(--n9); background: 
     </div>
     <div class="lp-r">
       <div class="lp-r-pill"><div class="lp-r-pill-dot"></div>Live System</div>
-      <h2>Manage your vendor pipeline end-to-end.</h2>
-      <p>Track candidates from first contact through hiring, interview, training and final certification — all in one place.</p>
+      <h2>Manage your candidate pipeline end-to-end.</h2>
+      <p>Track candidates from first contact through interview, training, certification and working from with real-time visibility.</p>
       <div class="lp-features">
-        <div class="lp-feat"><div class="lp-feat-ic">📋</div>Full hiring pipeline tracking</div>
+        <div class="lp-feat"><div class="lp-feat-ic">📋</div>Full candidates pipeline tracking</div>
         <div class="lp-feat"><div class="lp-feat-ic">🔐</div>Role-based access control</div>
-        <div class="lp-feat"><div class="lp-feat-ic">📊</div>Real-time data from Google Sheets</div>
-        <div class="lp-feat"><div class="lp-feat-ic">🏆</div>Interview → Training → Certification</div>
+        <div class="lp-feat"><div class="lp-feat-ic">📊</div>Real-time data</div>
+        <div class="lp-feat"><div class="lp-feat-ic">🏆</div>Interview → Training → Certification → Working From</div>
       </div>
     </div>
   </div>
@@ -390,6 +473,10 @@ details.u-login[open] summary { border-bottom: 1px solid var(--n9); background: 
       <button class="nbtn" data-page="report" onclick="APP.nav('report')">
         <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
         <span>Report</span>
+      </button>
+      <button class="nbtn" data-page="settings" onclick="APP.nav('settings')">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8.5A3.5 3.5 0 1 0 12 15.5A3.5 3.5 0 1 0 12 8.5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06A1.65 1.65 0 0 0 15 19.4a1.65 1.65 0 0 0-1 .6 1.65 1.65 0 0 0-.33 1V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-.33-1 1.65 1.65 0 0 0-1-.6 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-.6-1 1.65 1.65 0 0 0-1-.33H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1-.33 1.65 1.65 0 0 0 .6-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6c.38 0 .74-.14 1-.4.26-.26.4-.62.4-1V3a2 2 0 1 1 4 0v.09c0 .38.14.74.4 1 .26.26.62.4 1 .4.63 0 1.23-.25 1.67-.69l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06c-.44.44-.69 1.04-.69 1.67 0 .38.14.74.4 1 .26.26.62.4 1 .4H21a2 2 0 1 1 0 4h-.09c-.38 0-.74.14-1 .4-.26.26-.4.62-.4 1z"/></svg>
+        <span>Settings</span>
       </button>
       <div class="sb-section admin-only">Admin</div>
       <button class="nbtn admin-only" data-page="access" onclick="APP.nav('access')">
@@ -437,7 +524,6 @@ details.u-login[open] summary { border-bottom: 1px solid var(--n9); background: 
               <span>Show Details</span>
               <label class="tgl"><input type="checkbox" id="detailsTgl" onchange="HIRING.toggleDetails(this.checked)"><div class="tgl-t"></div><div class="tgl-k"></div></label>
             </div>
-            <button class="btn btn-s" onclick="HIRING.openImport()">Import CSV</button>
             <button class="btn btn-s" onclick="HIRING.openBulkUpdate()">Multiple Update</button>
             <button class="btn btn-p" onclick="HIRING.openAdd()">+ Add Candidate</button>
           </div>
@@ -455,11 +541,15 @@ details.u-login[open] summary { border-bottom: 1px solid var(--n9); background: 
               <option>Selected</option><option>Rejected</option><option>Completed</option>
               <option>Dropout</option><option>Certified</option><option>Not Certified</option><option>Working from</option>
             </select>
+            <div class="table-actions">
+              <button class="scroll-btn" onclick="APP.scrollTable('hTableWrap',-280)" title="Scroll left">←</button>
+              <button class="scroll-btn" onclick="APP.scrollTable('hTableWrap',280)" title="Scroll right">→</button>
+            </div>
           </div>
-          <div class="tbl-wrap"><table>
+          <div class="tbl-wrap" id="hTableWrap"><table>
             <thead><tr>
-              <th style="width:30px;"><input type="checkbox" onchange="HIRING.toggleAll(this.checked)"></th>
-              <th>ID</th><th>Batch ID</th><th>Req ID</th><th>Full Name</th><th>First Name</th><th>Last Name</th>
+              <th class="sticky-col sticky-col-1" style="width:42px;"><input type="checkbox" onchange="HIRING.toggleAll(this.checked)"></th>
+              <th class="sticky-col sticky-col-2">ID</th><th class="sticky-col sticky-col-3">Batch ID</th><th class="sticky-col sticky-col-4">Req ID</th><th class="sticky-col sticky-col-5">Full Name</th><th>First Name</th><th>Last Name</th>
               <th>Vendor</th><th>Hiring Date</th><th>Contact</th><th>Personal Gmail ID</th>
               <th>Work Exp</th><th>Languages</th><th>Interview</th><th>Training</th><th>Certification</th><th>Working from</th><th>Final Status</th><th>Actions</th>
             </tr></thead>
@@ -478,14 +568,61 @@ details.u-login[open] summary { border-bottom: 1px solid var(--n9); background: 
           </div>
         </div>
         <div class="tbl-card">
-          <div class="tbl-wrap"><table>
-            <thead><tr><th>Req ID</th><th>Process</th><th>Required Language</th><th>Head Count</th><th>Requirement Skill</th><th>Required TAT</th><th>Required By</th><th>Interview Count</th><th>Training Count</th><th>Certification Count</th><th>Working from</th></tr></thead>
+          <div class="tbl-toolbar">
+            <div class="hint-box">Vendor-wise language headcount, requirement skill preview, mail draft status and send mail action are available here.</div>
+            <div class="table-actions">
+              <button class="scroll-btn" onclick="APP.scrollTable('reqTableWrap',-280)" title="Scroll left">←</button>
+              <button class="scroll-btn" onclick="APP.scrollTable('reqTableWrap',280)" title="Scroll right">→</button>
+            </div>
+          </div>
+          <div class="tbl-wrap" id="reqTableWrap"><table>
+            <thead><tr><th>Req ID</th><th>Vendor Name</th><th>Process</th><th>Required Language</th><th>Head Count</th><th>Requirement Skill</th><th>Required TAT</th><th>Required By</th><th>Mail</th><th>Interview Count</th><th>Training Count</th><th>Certification Count</th><th>Working from</th><th>Actions</th></tr></thead>
             <tbody id="reqBody"></tbody>
           </table></div>
         </div>
       </div>
 
-      <div id="pg-report" class="pg"><div class="coming"><div class="coming-ico">📊</div><h2>Report</h2><p>Coming soon.</p></div></div>
+      <div id="pg-report" class="pg">
+        <div class="ph">
+          <div class="ph-left"><h1>Vendor Report</h1><p>Review vendor-wise performance and compare full pipeline conversion.</p></div>
+          <div class="ph-right"><button class="btn btn-s" onclick="REPORT.load()">↺ Refresh</button></div>
+        </div>
+        <div class="stat-grid" id="reportStats"></div>
+        <div class="report-grid">
+          <div class="report-card">
+            <div class="inline-tool"><h3>Vendor Comparison</h3><div id="reportTopVendor" class="zoom-badge">Loading…</div></div>
+            <div class="tbl-wrap report-table"><table>
+              <thead><tr><th>Vendor</th><th>Total</th><th>Interview</th><th>Training</th><th>Certification</th><th>Working From</th></tr></thead>
+              <tbody id="reportBody"></tbody>
+            </table></div>
+          </div>
+          <div class="report-card">
+            <div class="inline-tool"><h3>Insights</h3><div class="zoom-badge">Auto</div></div>
+            <div id="reportInsights" class="hint-box">Loading vendor insights…</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="pg-settings" class="pg">
+        <div class="ph">
+          <div class="ph-left"><h1>Settings</h1><p>Switch theme, adjust zoom, font style and base font size for your workspace.</p></div>
+          <div class="ph-right"><button class="btn btn-p" onclick="SETTINGS.save()">Save Settings</button></div>
+        </div>
+        <div class="settings-grid">
+          <div class="settings-card">
+            <div class="fgrid">
+              <div class="fg"><div class="flbl">Theme</div><select id="stTheme" class="finp"><option value="light">Light</option><option value="dark">Dark</option></select></div>
+              <div class="fg"><div class="flbl">Zoom</div><input id="stZoom" class="finp" type="range" min="80" max="125" step="5" oninput="SETTINGS.preview()"><div id="stZoomText" class="zoom-badge">100%</div></div>
+              <div class="fg"><div class="flbl">Font Style</div><select id="stFont" class="finp"><option>Inter</option><option>Poppins</option><option>Montserrat</option><option>Lato</option><option>Merriweather</option></select></div>
+              <div class="fg"><div class="flbl">Font Size</div><input id="stFontSize" class="finp" type="range" min="12" max="18" step="1" oninput="SETTINGS.preview()"><div id="stFontSizeText" class="zoom-badge">14px</div></div>
+            </div>
+          </div>
+          <div class="settings-card">
+            <div class="inline-tool"><h3>Preview</h3><div class="zoom-badge">Live</div></div>
+            <div id="settingsPreview" class="compose-preview">Changes here affect your app view immediately after save. This includes light or dark theme, zoom, font family and font size.</div>
+          </div>
+        </div>
+      </div>
 
       <div id="pg-access" class="pg">
         <div class="ph"><div class="ph-left"><h1>Access Management</h1><p>Control app access by role and company.</p></div>
@@ -587,114 +724,117 @@ details.u-login[open] summary { border-bottom: 1px solid var(--n9); background: 
 // APP — core
 // ══════════════════════════════════════════
 const APP=(function(){
-  let _u=null,_dv={};
+  let _u=null,_dv={},_settings={theme:'light',zoom:100,fontFamily:'Inter',fontSize:14};
 
   function _prog(w){const el=document.getElementById('prog');el.style.width=w+'%';el.classList.toggle('loading',w>0&&w<100);if(w>=100)setTimeout(()=>{el.style.width='0%';el.classList.remove('loading');},400);}
+  function _showErr(msg){const el=document.getElementById('lpErr');el.textContent='⚠ '+msg;el.classList.add('show');}
 
   function login(){
     const btn=document.getElementById('lpBtn');
-    btn.disabled=true;btn.textContent='Signing in…';
-    _prog(30);
-    google.script.run
-      .withSuccessHandler(function(res){
-        _prog(90);
-        btn.disabled=false;
-        btn.innerHTML='<svg width="18" height="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.36-8.16 2.36-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>Continue with Google Account';
-        if(!res.ok){_showErr(res.msg);_prog(0);return;}
-        _u=res;if(res.dv)_dv=res.dv;
-        _prog(100);
-        document.getElementById('loginPage').style.display='none';
-        document.getElementById('mainApp').style.display='flex';
-        // Set user UI
-        document.getElementById('sbName').textContent=_u.name;
-        document.getElementById('sbRole').textContent=_u.role+' · '+_u.company;
-        document.getElementById('sbAv').textContent=(_u.name||'U').charAt(0).toUpperCase();
-        if(_u.role!=='Admin')document.querySelectorAll('.admin-only').forEach(el=>el.style.display='none');
-        HIRING.load();
-      })
-      .withFailureHandler(function(e){
-        _prog(0);btn.disabled=false;
-        btn.innerHTML='Continue with Google Account';
-        _showErr(e.message||'Authentication failed. Try again.');
-      })
-      .initApp();
+    btn.disabled=true;btn.textContent='Signing in…';_prog(30);
+    google.script.run.withSuccessHandler(function(res){
+      _prog(100);btn.disabled=false;
+      btn.innerHTML='<svg width="18" height="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.36-8.16 2.36-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>Continue with Google Account';
+      if(!res.ok){_showErr(res.msg);return;}
+      _u=res;_dv=res.dv||{};_settings=res.settings||_settings;
+      applySettings(_settings);
+      document.getElementById('loginPage').style.display='none';
+      document.getElementById('mainApp').style.display='flex';
+      document.getElementById('sbName').textContent=_u.name;
+      document.getElementById('sbRole').textContent=_u.role+' · '+_u.company;
+      document.getElementById('sbAv').textContent=(_u.name||'U').charAt(0).toUpperCase();
+      if(_u.role!=='Admin')document.querySelectorAll('.admin-only').forEach(el=>el.style.display='none');
+      SETTINGS.loadUI();
+      HIRING.load();
+    }).withFailureHandler(function(e){
+      _prog(0);btn.disabled=false;btn.innerHTML='Continue with Google Account';_showErr(e.message||'Authentication failed. Try again.');
+    }).initApp();
   }
-
-  function _showErr(msg){const el=document.getElementById('lpErr');el.textContent='⚠ '+msg;el.classList.add('show');}
 
   function nav(page){
     document.querySelectorAll('.pg').forEach(el=>el.classList.remove('active'));
     document.querySelectorAll('.nbtn').forEach(el=>el.classList.remove('active'));
-    const pg=document.getElementById('pg-'+page);if(pg)pg.classList.add('active');
-    const btn=document.querySelector('.nbtn[data-page="'+page+'"]');if(btn)btn.classList.add('active');
+    document.getElementById('pg-'+page)?.classList.add('active');
+    document.querySelector('.nbtn[data-page="'+page+'"]')?.classList.add('active');
+    if(page==='hiring')HIRING.load();
+    if(page==='requirement')REQUIREMENT.load();
+    if(page==='report')REPORT.load();
+    if(page==='settings')SETTINGS.load();
     if(page==='access')ADMIN.loadAccess();
     if(page==='userbase')ADMIN.loadUserBase();
     if(page==='dv')ADMIN.loadDV();
     if(page==='log')ADMIN.loadLog();
-    if(page==='requirement')REQUIREMENT.load();
   }
 
-  function toggleSidebar() {
-    const sb = document.getElementById('appSidebar');
-    sb.classList.toggle('collapsed');
-  }
-
-  function openModal(title,html,sub){
-    document.getElementById('mTitle').textContent=title;
-    document.getElementById('mSub').textContent=sub||'';
-    document.getElementById('mBody').innerHTML=html;
-    document.getElementById('mBg').classList.add('open');
-  }
+  function toggleSidebar(){document.getElementById('appSidebar').classList.toggle('collapsed');}
+  function openModal(title,html,sub,cls){document.getElementById('mTitle').textContent=title;document.getElementById('mSub').textContent=sub||'';document.getElementById('mBody').innerHTML=html;document.getElementById('mainModalBox').className='modal-box'+(cls?' '+cls:'');document.getElementById('mBg').classList.add('open');}
   function closeModal(e){if(e&&e.target!==document.getElementById('mBg'))return;forceClose();}
-  function forceClose(){document.getElementById('mBg').classList.remove('open');document.getElementById('mBody').innerHTML='';}
+  function forceClose(){document.getElementById('mBg').classList.remove('open');document.getElementById('mBody').innerHTML='';document.getElementById('mainModalBox').className='modal-box';}
+  function toast(msg,type){const el=document.getElementById('toast');el.textContent=msg;el.className='show '+(type||'info');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('show'),3200);}
 
-  function toast(msg,type){
-    const el=document.getElementById('toast');
-    el.textContent=msg;el.className='show '+(type||'info');
-    clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('show'),3200);
-  }
-
-  function setDV(dv){_dv=dv;}
-  function getDV(){return _dv||{};}
-  function getUser(){return _u;}
-
-  function fmtDate(v){
-    if(!v)return'—';
-    try{return new Date(v).toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'});}catch(e){return v;}
-  }
+  function fmtDate(v){if(!v)return'—';try{return new Date(v).toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'});}catch(e){return v;}}
   function toISO(v){if(!v)return'';try{return new Date(v).toISOString().slice(0,10);}catch(e){return'';}}
   function maskPhone(ph){if(!ph)return'—';const s=String(ph);return s.length>=4?'•••••••'+s.slice(-3):s;}
-  function maskEmail(em){
-    if(!em) return '—';
-    const pts = String(em).split('@');
-    if(pts.length<2) return em;
-    return pts[0].charAt(0) + '••••@' + pts[1];
-  }
-  
-  function copyText(txt) {
-    if(!txt || txt==='—') return;
-    navigator.clipboard.writeText(txt).then(()=>APP.toast('Copied to clipboard','ok')).catch(()=>APP.toast('Copy failed','err'));
-  }
+  function maskEmail(em){if(!em)return'—';const pts=String(em).split('@');return pts.length<2?em:pts[0].charAt(0)+'••••@'+pts[1];}
+  function copyText(txt){if(!txt||txt==='—')return;navigator.clipboard.writeText(txt).then(()=>toast('Copied to clipboard','ok')).catch(()=>toast('Copy failed','err'));}
+  function badge(val){if(!val)return'<span class="bdg b-gray">—</span>';const v=val.toLowerCase();const cls=(['selected','completed','certified','working from'].includes(v)?'b-green':['rejected','not certified'].includes(v)?'b-red':v==='dropout'?'b-yellow':['call not answer','not available today'].includes(v)?'b-gray':'b-blue');return'<span class="bdg '+cls+'">'+val+'</span>';}
+  function skelRows(cols,n){const w=['60px','80px','120px','80px','90px','90px','80px','140px','80px','80px','80px','80px','60px'];return Array(n||6).fill(0).map(()=>'<tr class="skel-row">'+Array(cols).fill(0).map((_,i)=>'<td><span class="skel" style="width:'+((w[i])||'80px')+';height:14px;display:inline-block"></span></td>').join('')+'</tr>').join('');}
+  function refreshFormData(cb){google.script.run.withSuccessHandler(function(res){if(res.ok&&res.data){_dv=res.data;cb&&cb(res.data);}}).withFailureHandler(function(e){toast(e.message,'err');}).getRealtimeFormData(_u||{});}
+  function applySettings(settings){_settings=Object.assign({},_settings,settings||{});document.body.classList.toggle('theme-dark',_settings.theme==='dark');document.body.dataset.font=_settings.fontFamily||'Inter';document.body.style.fontSize=(_settings.fontSize||14)+'px';document.body.style.setProperty('--app-zoom',(_settings.zoom||100)/100);}
+  function getSettings(){return _settings||{};}
+  function scrollTable(id,delta){const el=document.getElementById(id);if(el)el.scrollLeft+=delta;}
+  function validateEmail(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test((v||'').trim());}
 
-  function badge(val){
-    if(!val)return'<span class="bdg b-gray">—</span>';
-    const v=val.toLowerCase(),
-      cls=(['selected','completed','certified','working from'].includes(v)?'b-green':['rejected','not certified'].includes(v)?'b-red':v==='dropout'?'b-yellow':['call not answer','not available today'].includes(v)?'b-gray':'b-blue');
-    return'<span class="bdg '+cls+'">'+val+'</span>';
+  document.addEventListener('click',function(e){if(!e.target.closest('.acw'))document.querySelectorAll('.acdrop').forEach(d=>d.classList.remove('open'));});
+  return{login,nav,toggleSidebar,openModal,closeModal,forceClose,toast,fmtDate,toISO,maskPhone,maskEmail,copyText,badge,skelRows,getUser:()=>_u,getDV:()=>_dv,setDV:(dv)=>_dv=dv||{},refreshFormData,applySettings,getSettings,scrollTable,validateEmail};
+})();
+</script>
+
+<script>
+const REPORT=(function(){
+  function load(){
+    document.getElementById('reportBody').innerHTML=APP.skelRows(6,4);
+    google.script.run.withSuccessHandler(function(res){
+      if(!res.ok){APP.toast(res.msg,'err');return;}
+      const data=res.data||{},overall=data.overall||{},rows=data.vendorRows||[];
+      document.getElementById('reportStats').innerHTML=
+        card(overall.totalCandidates||0,'Total Candidates','#7C3AED','👥')+
+        card(overall.interviewSelected||0,'Interview Selected','#0F766E','🗓')+
+        card(overall.trainingCompleted||0,'Training Completed','#2563EB','📚')+
+        card(overall.certified||0,'Certified','#D97706','🏆')+
+        card(overall.workingFrom||0,'Working From','#059669','🏢');
+      document.getElementById('reportTopVendor').textContent=data.topVendor?('Top Vendor: '+data.topVendor.vendorName):'No data';
+      document.getElementById('reportBody').innerHTML=rows.length?rows.map(r=>'<tr><td class="fw7">'+r.vendorName+'</td><td>'+r.totalCandidates+'</td><td><span class="rate">'+r.interviewSelectionRate+'%</span><div class="muted fs12">'+r.interviewSelected+' selected</div></td><td><span class="rate">'+r.trainingCompletionRate+'%</span><div class="muted fs12">'+r.trainingCompleted+' completed</div></td><td><span class="rate">'+r.certificationRate+'%</span><div class="muted fs12">'+r.certified+' certified</div></td><td><span class="rate">'+r.workingFromRate+'%</span><div class="muted fs12">'+r.workingFrom+' working from</div></td></tr>').join(''):'<tr><td colspan="6" style="text-align:center;padding:32px;color:var(--n5)">No report data available.</td></tr>';
+      document.getElementById('reportInsights').innerHTML=rows.length?rows.map(r=>'<div style="padding:10px 0;border-bottom:1px dashed var(--n8)"><strong>'+r.vendorName+'</strong><br><span class="muted">Interview '+r.interviewSelectionRate+'% · Training '+r.trainingCompletionRate+'% · Certification '+r.certificationRate+'% · Working From '+r.workingFromRate+'%</span></div>').join(''):'No insights available.';
+    }).withFailureHandler(function(e){APP.toast(e.message,'err');}).getReportData(APP.getUser());
   }
+  function card(v,l,a,ic){return'<div class="scard" style="--accent:'+a+'"><div class="scard-ico">'+ic+'</div><div class="scard-val">'+v+'</div><div class="scard-lbl">'+l+'</div><div class="scard-bar"></div></div>';}
+  return{load};
+})();
+</script>
 
-  function skelRows(cols,n){
-    const w=['60px','80px','120px','80px','90px','90px','80px','140px','80px','80px','80px','80px','60px'];
-    return Array(n||6).fill(0).map(()=>'<tr class="skel-row">'+
-      Array(cols).fill(0).map((_,i)=>'<td><span class="skel" style="width:'+((w[i])||'80px')+';height:14px;display:inline-block"></span></td>').join('')+
-    '</tr>').join('');
+<script>
+const SETTINGS=(function(){
+  function load(){google.script.run.withSuccessHandler(function(res){if(res.ok&&res.data){APP.applySettings(res.data);loadUI(res.data);}}).getUserSettings();}
+  function loadUI(settings){
+    const st=settings||APP.getSettings();
+    if(document.getElementById('stTheme'))document.getElementById('stTheme').value=st.theme||'light';
+    if(document.getElementById('stZoom'))document.getElementById('stZoom').value=st.zoom||100;
+    if(document.getElementById('stFont'))document.getElementById('stFont').value=st.fontFamily||'Inter';
+    if(document.getElementById('stFontSize'))document.getElementById('stFontSize').value=st.fontSize||14;
+    preview();
   }
-
-  document.addEventListener('click',function(e){
-    if(!e.target.closest('.acw'))document.querySelectorAll('.acdrop').forEach(d=>d.classList.remove('open'));
-  });
-
-  return{login,nav,toggleSidebar,openModal,closeModal,forceClose,toast,setDV,getDV,getUser,fmtDate,toISO,maskPhone,maskEmail,copyText,badge,skelRows};
+  function preview(){
+    const settings={theme:document.getElementById('stTheme')?.value||APP.getSettings().theme,zoom:Number(document.getElementById('stZoom')?.value||APP.getSettings().zoom),fontFamily:document.getElementById('stFont')?.value||APP.getSettings().fontFamily,fontSize:Number(document.getElementById('stFontSize')?.value||APP.getSettings().fontSize)};
+    if(document.getElementById('stZoomText'))document.getElementById('stZoomText').textContent=settings.zoom+'%';
+    if(document.getElementById('stFontSizeText'))document.getElementById('stFontSizeText').textContent=settings.fontSize+'px';
+    APP.applySettings(settings);
+  }
+  function save(){
+    const settings={theme:document.getElementById('stTheme').value,zoom:Number(document.getElementById('stZoom').value),fontFamily:document.getElementById('stFont').value,fontSize:Number(document.getElementById('stFontSize').value)};
+    google.script.run.withSuccessHandler(function(res){if(!res.ok){APP.toast(res.msg,'err');return;}APP.applySettings(res.data||settings);APP.toast('Settings saved','ok');}).withFailureHandler(function(e){APP.toast(e.message,'err');}).saveUserSettings(settings,APP.getUser());
+  }
+  return{load,loadUI,preview,save};
 })();
 </script>
 
@@ -703,117 +843,86 @@ const APP=(function(){
 // REQUIREMENT
 // ══════════════════════════════════════════
 const REQUIREMENT=(function(){
-  function load() {
-    document.getElementById('reqBody').innerHTML=APP.skelRows(11,4);
-    google.script.run
-      .withSuccessHandler(function(res){
-        if(!res.ok){APP.toast(res.msg,'err');return;}
-        _renderTable(res.data||[]);
-      })
-      .withFailureHandler(function(e){APP.toast(e.message,'err');})
-      .getRequirementData();
+  let _data=[];
+  function load(){
+    document.getElementById('reqBody').innerHTML=APP.skelRows(14,4);
+    google.script.run.withSuccessHandler(function(res){
+      if(!res.ok){APP.toast(res.msg,'err');return;}
+      _data=res.data||[];render();
+    }).withFailureHandler(function(e){APP.toast(e.message,'err');}).getRequirementData(APP.getUser());
   }
-  
-  function _renderTable(data) {
-    const tbody = document.getElementById('reqBody');
-    if(!data.length){
-      tbody.innerHTML='<tr><td colspan="11" style="text-align:center;padding:40px;color:var(--n5)">No requirements found.</td></tr>';
-      return;
-    }
-    
-    const pct = (count, total) => total > 0 ? Math.round((count/total)*100)+'%' : '0%';
-    
-    tbody.innerHTML = data.map(r => {
-      const hc = parseInt(r['Head count']) || 0;
-      const m = r.metrics;
-      
-      const pInt = pct(m.intT, hc);
-      const intDtl = `<div class="sub-metrics"><span class="sm-g">${m.intS} S</span> <span class="sm-r">${m.intR} R</span></div>`;
-      
-      const pTrn = pct(m.trnT, hc);
-      const trnDtl = `<div class="sub-metrics"><span class="sm-g">${m.trnC} C</span> <span class="sm-y">${m.trnD} D</span></div>`;
-      
-      const pCrt = pct(m.crtT, hc);
-      const crtDtl = `<div class="sub-metrics"><span class="sm-g">${m.crtC} C</span> <span class="sm-r">${m.crtN} N</span></div>`;
-      
-      const pWf = pct(m.wf, hc);
-
+  function pct(count,total){return total>0?Math.round((count/total)*100)+'%':'0%';}
+  function render(){
+    const tbody=document.getElementById('reqBody');
+    if(!_data.length){tbody.innerHTML='<tr><td colspan="14" style="text-align:center;padding:40px;color:var(--n5)">No requirements found.</td></tr>';return;}
+    tbody.innerHTML=_data.map(r=>{
+      const hc=parseInt(r['Head count']||0,10)||0,m=r.metrics||{};
+      const breakdown=(r.breakdown||[]).map(item=>'<span class="req-chip">'+item.language+' <b>'+item.headCount+'</b></span>').join('');
+      const skill=r['Requirement Skill']||'—';
       return '<tr>'+
         '<td class="fw7" style="color:var(--p)">'+r['Req ID']+'</td>'+
-        '<td class="fw7">'+r['Process']+'</td>'+
-        '<td>'+r['Required Language']+'</td>'+
+        '<td>'+((r['Vendor Name'])||'—')+'</td>'+
+        '<td class="fw7">'+(r['Process']||'—')+'</td>'+
+        '<td><div class="req-breakdown">'+(breakdown||'—')+'</div></td>'+
         '<td><span class="bdg b-gray">'+hc+'</span></td>'+
-        '<td class="muted" style="max-width:150px; white-space:normal;">'+(r['Requirement Skill']||'—')+'</td>'+
+        '<td><div class="req-skill" title="'+skill.replace(/"/g,'&quot;')+'">'+skill+'</div>'+(skill.length>15?'<button class="btn btn-s btn-sm" style="margin-top:6px" onclick="REQUIREMENT.viewSkill(\''+skill.replace(/'/g,"\\'")+'\')">View</button>':'')+'</td>'+
         '<td class="fs12 muted">'+APP.fmtDate(r['Required TAT'])+'</td>'+
         '<td class="fs12 muted">'+(r['Required By']||'—')+'</td>'+
-        '<td><span class="bdg b-blue">'+m.intT+' ('+pInt+')</span>'+intDtl+'</td>'+
-        '<td><span class="bdg b-yellow">'+m.trnT+' ('+pTrn+')</span>'+trnDtl+'</td>'+
-        '<td><span class="bdg b-purple">'+m.crtT+' ('+pCrt+')</span>'+crtDtl+'</td>'+
-        '<td><span class="bdg b-green">'+m.wf+' ('+pWf+')</span></td>'+
+        '<td>'+APP.badge(r['Mail Status']||'Pending')+'</td>'+
+        '<td><span class="bdg b-blue">'+(m.intT||0)+' ('+pct(m.intT||0,hc)+')</span><div class="sub-metrics"><span class="sm-g">'+(m.intS||0)+' S</span><span class="sm-r">'+(m.intR||0)+' R</span></div></td>'+
+        '<td><span class="bdg b-yellow">'+(m.trnT||0)+' ('+pct(m.trnT||0,hc)+')</span><div class="sub-metrics"><span class="sm-g">'+(m.trnC||0)+' C</span><span class="sm-y">'+(m.trnD||0)+' D</span></div></td>'+
+        '<td><span class="bdg b-purple">'+(m.crtT||0)+' ('+pct(m.crtT||0,hc)+')</span><div class="sub-metrics"><span class="sm-g">'+(m.crtC||0)+' C</span><span class="sm-r">'+(m.crtN||0)+' N</span></div></td>'+
+        '<td><span class="bdg b-green">'+(m.wf||0)+' ('+pct(m.wf||0,hc)+')</span></td>'+
+        '<td><button class="btn btn-s btn-sm" onclick="REQUIREMENT.openMail(\''+r['Req ID']+'\')">Send Mail</button></td>'+
       '</tr>';
     }).join('');
   }
-
-  function openAdd() {
-    const u = APP.getUser();
-    if(u.company !== 'Porter') {
-      APP.toast('Only The Porter Client can add these Requirements.', 'err');
-      return;
-    }
-    
-    const dv = APP.getDV();
-    const lOpts = (dv.languages||[]).map(l=>`<option value="${l}">${l}</option>`).join('');
-    const pOpts = (dv.selectedProcess||[]).map(p=>`<option value="${p}">${p}</option>`).join('');
-
-    const html = `
-      <div class="fgrid">
-        <div class="fg"><div class="flbl">Required By (Gmail)<span class="req">*</span></div>
-          <input type="email" class="finp" id="req_by" value="${u.email}" readonly>
-        </div>
-        <div class="fg"><div class="flbl">Process<span class="req">*</span></div>
-          <select class="finp" id="req_process"><option value="">Select Process...</option>${pOpts}</select>
-        </div>
-        <div class="fg"><div class="flbl">Required Language<span class="req">*</span></div>
-          <select class="finp" id="req_lang"><option value="">Select Language...</option>${lOpts}</select>
-        </div>
-        <div class="fg"><div class="flbl">Head Count<span class="req">*</span></div>
-          <input type="number" class="finp" id="req_hc" placeholder="e.g. 10">
-        </div>
-        <div class="fg"><div class="flbl">Required TAT<span class="req">*</span></div>
-          <input type="date" class="finp" id="req_tat">
-        </div>
-        <div class="fg full"><div class="flbl">Requirement Skill</div>
-          <textarea class="finp" id="req_skill" placeholder="Enter necessary skills..."></textarea>
-        </div>
-      </div>
-      <div class="mfoot">
-        <button class="btn btn-s" onclick="APP.forceClose()">Cancel</button>
-        <button class="btn btn-p" onclick="REQUIREMENT.submit()">✓ Save</button>
-      </div>
-    `;
-    APP.openModal('Add Requirement', html);
+  function openAdd(){
+    const u=APP.getUser(); if(u.company!=='Porter'){APP.toast('Only Porter users can add requirements.','err');return;}
+    APP.refreshFormData(function(dv){
+      const html='<div class="fgrid">'+
+        '<div class="fg"><div class="flbl">Vendor Name<span class="req">*</span></div><select id="req_vendor" class="finp"><option value="">Select vendor…</option>'+(dv.vendors||[]).map(v=>'<option>'+v+'</option>').join('')+'</select></div>'+
+        '<div class="fg"><div class="flbl">Process<span class="req">*</span></div><select id="req_process" class="finp"><option value="">Select process…</option>'+(dv.selectedProcess||[]).map(v=>'<option>'+v+'</option>').join('')+'</select></div>'+
+        '<div class="fg"><div class="flbl">Required By (Gmail)<span class="req">*</span></div><input id="req_by" class="finp" value="'+u.email+'" readonly></div>'+
+        '<div class="fg"><div class="flbl">Required TAT<span class="req">*</span></div><input id="req_tat" class="finp" type="date"></div>'+
+        '<div class="fg full"><div class="field-inline"><div class="flbl">Language Wise Head Count<span class="req">*</span></div><button class="btn btn-s btn-sm" type="button" onclick="REQUIREMENT.addRow()">+ Add</button></div><div id="reqRows"></div></div>'+
+        '<div class="fg full"><div class="flbl">Requirement Skill</div><textarea id="req_skill" class="finp" placeholder="Enter skills, notes or process brief..."></textarea></div>'+
+      '</div><div class="mfoot"><button class="btn btn-s" onclick="APP.forceClose()">Cancel</button><button class="btn btn-p" onclick="REQUIREMENT.submit()">Save Requirement</button></div>';
+      APP.openModal('Add Requirement',html,'Vendor and language-wise requirement','form-modal');
+      addRow();
+    });
   }
-
-  function submit() {
-    const g=id=>document.getElementById(id).value.trim();
-    const by=g('req_by'), process=g('req_process'), lang=g('req_lang'), hc=g('req_hc'), tat=g('req_tat'), skill=g('req_skill');
-    
-    if(!process || !lang || !hc || !tat) { APP.toast('Fill all required fields', 'err'); return; }
-    
-    const rec = { 'Process': process, 'Required Language': lang, 'Head count': hc, 'Requirement Skill': skill, 'Required TAT': tat, 'Required By': by };
-    
-    const sb = document.querySelector('.mfoot .btn-p'); if(sb){sb.disabled=true;sb.textContent='Saving…';}
-    google.script.run
-      .withSuccessHandler(function(res){
-        if(sb){sb.disabled=false;sb.innerHTML='✓ Save';}
-        if(!res.ok){APP.toast(res.msg||'Save failed','err');return;}
-        APP.toast(res.msg||'Requirement Saved!','ok'); APP.forceClose(); load();
-      })
-      .withFailureHandler(function(e){if(sb){sb.disabled=false;sb.innerHTML='✓ Save';}APP.toast(e.message,'err');})
-      .saveRequirement(rec, APP.getUser());
+  function addRow(language,headCount){
+    const wrap=document.getElementById('reqRows'); if(!wrap)return;
+    const langs=(APP.getDV().languages||[]).map(v=>'<option '+(v===language?'selected':'')+'>'+v+'</option>').join('');
+    wrap.insertAdjacentHTML('beforeend','<div class="mapping-row" style="margin-bottom:10px"><select class="finp req-lang"><option value=\"\">Select language…</option>'+langs+'</select><div style="text-align:center">×</div><input class="finp req-count" type="number" min="1" placeholder="Head count" value="'+(headCount||'')+'"></div>');
   }
-
-  return { load, openAdd, submit };
+  function submit(){
+    const langs=[...document.querySelectorAll('.req-lang')].map((el,idx)=>({language:el.value,headCount:document.querySelectorAll('.req-count')[idx].value})).filter(item=>item.language&&item.headCount);
+    const rec={'Vendor Name':document.getElementById('req_vendor').value,'Process':document.getElementById('req_process').value,'Required By':document.getElementById('req_by').value,'Required TAT':document.getElementById('req_tat').value,'Requirement Skill':document.getElementById('req_skill').value,breakdown:langs};
+    if(!rec['Vendor Name']||!rec.Process||!rec['Required TAT']||!langs.length){APP.toast('Fill vendor, process, TAT and at least one language row.','err');return;}
+    google.script.run.withSuccessHandler(function(res){if(!res.ok){APP.toast(res.msg,'err');return;}APP.toast(res.msg||'Requirement saved','ok');APP.forceClose();load();}).withFailureHandler(function(e){APP.toast(e.message,'err');}).saveRequirement(rec,APP.getUser());
+  }
+  function openMail(reqId){
+    const rec=_data.find(item=>item['Req ID']===reqId); if(!rec)return;
+    const subject='Req ID: '+rec['Req ID']+' Requirement of Agents for '+rec['Process']+' - '+rec['Vendor Name'];
+    const preview=(rec.breakdown||[]).map(item=>'<tr><td style="padding:6px 10px;border:1px solid #e2e8f0">'+item.language+'</td><td style="padding:6px 10px;border:1px solid #e2e8f0;text-align:center">'+item.headCount+'</td></tr>').join('');
+    const html='<div class="compose-shell">'+
+      '<div class="compose-line"><strong>To</strong><input id="rm_to" placeholder="vendor.to@company.com"></div>'+
+      '<div class="compose-line"><strong>CC</strong><input id="rm_cc" placeholder="Optional"></div>'+
+      '<div class="compose-line"><strong>BCC</strong><input id="rm_bcc" placeholder="Optional"></div>'+
+      '<div class="compose-line"><strong>Subject</strong><input id="rm_subject" value="'+subject.replace(/"/g,'&quot;')+'"></div>'+
+      '<div class="compose-body"><div class="compose-preview"><p>Hi Dynamic To Name,</p><p><strong>Req ID:</strong> '+rec['Req ID']+'<br><strong>Process:</strong> '+rec['Process']+'<br><strong>Required By:</strong> '+(rec['Required By']||'—')+'<br><strong>Required TAT:</strong> '+APP.fmtDate(rec['Required TAT'])+'</p><p>'+(rec['Requirement Skill']||'Please find the requirement details below.')+'</p><p>Please find the language-wise headcount requirement for the process below.</p><table style="border-collapse:collapse;width:100%"><tr><th style="padding:6px 10px;border:1px solid #e2e8f0;background:#eff6ff">Required Language</th><th style="padding:6px 10px;border:1px solid #e2e8f0;background:#eff6ff">Head Count</th></tr>'+preview+'</table><p style="margin-top:16px">Thanks & Regards<br>'+APP.getUser().name+'<br>'+APP.getUser().email+'</p></div></div>'+
+    '</div><div class="mfoot"><button class="btn btn-s" onclick="APP.forceClose()">Cancel</button><button class="btn btn-p" onclick="REQUIREMENT.sendMail(\''+reqId+'\')">Create Gmail Draft</button></div>';
+    APP.openModal('Send Requirement Mail',html,'Compose requirement mail draft');
+  }
+  function sendMail(reqId){
+    const payload={reqId:reqId,to:document.getElementById('rm_to').value.trim(),cc:document.getElementById('rm_cc').value.trim(),bcc:document.getElementById('rm_bcc').value.trim(),subject:document.getElementById('rm_subject').value.trim()};
+    if(!payload.to){APP.toast('To email is required.','err');return;}
+    google.script.run.withSuccessHandler(function(res){if(!res.ok){APP.toast(res.msg,'err');return;}APP.toast(res.msg,'ok');APP.forceClose();load();}).withFailureHandler(function(e){APP.toast(e.message,'err');}).createRequirementMailDraft(payload,APP.getUser());
+  }
+  function viewSkill(skill){APP.openModal('Requirement Skill','<div class="compose-preview">'+String(skill||'—')+'</div>','Full requirement skill');}
+  return{load,openAdd,submit,addRow,openMail,sendMail,viewSkill};
 })();
 </script>
 
@@ -824,6 +933,8 @@ const REQUIREMENT=(function(){
 const HIRING=(function(){
   let _data=[],_fil=[],_mask=false,_details=false,_page=1,_acT={},_editId=null;
   const PS=25;
+  const IMPORT_HEADERS=['ID','Batch ID','Req ID','Vendor Name','Hiring Date','Full Name','First Name','Last Name','Contact Number','Alt Contact Number','Personal Gmail ID','Work Experience','Languages'];
+  let _import={mode:'csv',headers:[],rows:[]};
 
   function load(){
     const tbody=document.getElementById('hBody');
@@ -851,7 +962,7 @@ const HIRING=(function(){
       _sc(c,'Certified','#D97706','🏆')+
       _sc(wf,'Working from','#1D4ED8','🏢');
     const u=APP.getUser();
-    document.getElementById('hSubtitle').textContent=t+' candidate'+(t!==1?'s':'')+' · '+(u.role==='Supervisor'?u.company:'All Vendors');
+    document.getElementById('hSubtitle').textContent=t+' candidate'+(t!==1?'s':'')+' · '+(u.company&&u.company!=='Porter'?u.company:'All Vendors');
   }
   function _sc(v,l,a,ic){return'<div class="scard" style="--accent:'+a+'"><div class="scard-ico">'+ic+'</div><div class="scard-val">'+v+'</div><div class="scard-lbl">'+l+'</div><div class="scard-bar"></div></div>';}
 
@@ -893,11 +1004,11 @@ const HIRING=(function(){
       const crtDtl = _details && r['Certification Status'] ? `<div class="dtl-txt"><b>Date:</b> ${APP.fmtDate(r['Certified Date'])}<br><b>By:</b> ${r['Certification By']||'—'}<br><b>Reason:</b> ${r['Not Certified Reason']||'—'}</div>` : '';
 
       return'<tr>'+
-        '<td><input type="checkbox" class="row-chk" value="'+r['ID']+'"></td>'+
-        '<td class="id-cell">'+r['ID']+'</td>'+
-        '<td class="fw7">'+(r['Batch ID']||'—')+'</td>'+
-        '<td class="fw7" style="color:var(--p)">'+(r['Req ID']||'—')+'</td>'+
-        '<td class="name-cell">'+r['Full Name']+'</td>'+
+        '<td class="sticky-col sticky-col-1"><input type="checkbox" class="row-chk" value="'+r['ID']+'"></td>'+
+        '<td class="sticky-col sticky-col-2 id-cell">'+r['ID']+'</td>'+
+        '<td class="sticky-col sticky-col-3 fw7">'+(r['Batch ID']||'—')+'</td>'+
+        '<td class="sticky-col sticky-col-4 fw7" style="color:var(--p)">'+(r['Req ID']||'—')+'</td>'+
+        '<td class="sticky-col sticky-col-5 name-cell">'+r['Full Name']+'</td>'+
         '<td class="muted-cell">'+(r['First Name']||'—')+'</td>'+
         '<td class="muted-cell">'+(r['Last Name']||'—')+'</td>'+
         '<td>'+r['Vendor Name']+'</td>'+
@@ -932,9 +1043,9 @@ const HIRING=(function(){
   function toggleAll(chk) { document.querySelectorAll('.row-chk').forEach(c=>c.checked=chk); }
 
   // ── FORM HTML ──
-  function _fhtml(rec){
+  function _fhtml(rec,isEdit){
     const dv=APP.getDV(),u=APP.getUser(),r=rec||{};
-    const isSup=u.role==='Supervisor';
+    const isSup=!isEdit&&u.role==='Supervisor';
     const vOpts=isSup?'<option value="'+u.company+'" selected>'+u.company+'</option>':
       '<option value="">Select vendor…</option>'+(dv.vendors||[]).map(v=>'<option value="'+v+'"'+(v===r['Vendor Name']?' selected':'')+'>'+v+'</option>').join('');
     const exp=r['Work Experience']||'',isFr=exp==='Fresher',isEx=exp&&exp!=='Fresher';
@@ -958,6 +1069,10 @@ const HIRING=(function(){
   <div class="tstep" id="ts-o" onclick="HIRING.tab('o')"><span class="tnum">5</span>Working from</div>
 </div>
 <div id="tc-h" class="tcont active">
+<div class="inline-tool">
+  <div class="loading-pill"><span class="loading-dot"></span>Dropdown values synced from master sheet</div>
+  ${isEdit?'':'<button class="btn btn-s" type="button" onclick="HIRING.openImport()">Upload Data</button>'}
+</div>
 <div class="fgrid">
   <div class="fg"><div class="flbl">ID</div><input class="finp" id="hf_id" readonly value="${r['ID']||''}" placeholder="Auto-generated"></div>
   
@@ -982,7 +1097,7 @@ const HIRING=(function(){
   
   <div class="fg"><div class="flbl">Contact Number<span class="req">*</span></div><input class="finp" id="hf_contact" placeholder="10-digit" maxlength="10" value="${r['Contact Number']||''}" oninput="this.value=this.value.replace(/\\D/g,'').slice(0,10)"></div>
   <div class="fg"><div class="flbl">Alt Contact</div><input class="finp" id="hf_alt" placeholder="Optional" maxlength="10" value="${r['Alt Contact Number']||''}" oninput="this.value=this.value.replace(/\\D/g,'').slice(0,10)"></div>
-  <div class="fg"><div class="flbl">Personal Gmail ID<span class="req">*</span></div><input class="finp" type="email" id="hf_gmail" placeholder="abc@gmail.com" value="${r['Personal Gmail ID']||''}"></div>
+  <div class="fg"><div class="field-inline"><div class="flbl">Personal Gmail ID<span class="req">*</span></div><span id="hf_mail_hint" class="hidden loading-pill"><span class="loading-dot"></span>Valid email only</span></div><input class="finp" type="email" id="hf_gmail" placeholder="abc@gmail.com" value="${r['Personal Gmail ID']||''}" oninput="HIRING.validateMail()"></div>
   
   <div class="fg"><div class="flbl">Work Experience<span class="req">*</span></div>
     <select class="finp" id="hf_wexp" onchange="HIRING.onExp()">
@@ -1042,14 +1157,27 @@ const HIRING=(function(){
   <div class="fg full cond${cS==='Not Certified'?' show':''}" id="cf_nc"><div class="flbl">Not Certified Reason<span class="req">*</span></div><textarea class="finp" id="hf_ncr" placeholder="Reason…">${r['Not Certified Reason']||''}</textarea></div>
 </div></div>
 <div id="tc-o" class="tcont"><div class="fgrid">
-  <div class="fg"><div class="flbl">Working from Date</div><input class="finp" type="date" id="hf_doj" value="${APP.toISO(r['Date of Joining'])}"></div>
+  <div class="fg wf-field"><div class="flbl">Working from Date</div><input class="finp" type="date" id="hf_doj" value="${APP.toISO(r['Date of Joining'])}"></div>
 </div></div>
 
 <div class="mfoot"><button class="btn btn-s" onclick="APP.forceClose()">Cancel</button><button class="btn btn-p" onclick="HIRING.submit()">✓ Save Record</button></div>`;
   }
 
-  function openAdd(){_editId=null;APP.openModal('Add Candidate',_fhtml(null),'Pipeline Details');}
-  function openEdit(id){const rec=_data.find(r=>r['ID']===id);if(!rec){APP.toast('Not found','err');return;}_editId=id;APP.openModal('Edit Candidate',_fhtml(rec),'ID: '+id);}
+  function openAdd(){
+    _editId=null;
+    APP.refreshFormData(function(){
+      APP.openModal('Add Candidate',_fhtml(null,false),'Pipeline Details','form-modal');
+      if(APP.getUser().role==='Supervisor'){
+        document.querySelectorAll('.tstep').forEach((el,idx)=>{if(idx>0)el.classList.add('hidden');});
+      }
+    });
+  }
+  function openEdit(id){
+    const rec=_data.find(r=>r['ID']===id);
+    if(!rec){APP.toast('Not found','err');return;}
+    _editId=id;
+    APP.refreshFormData(function(){APP.openModal('Edit Candidate',_fhtml(rec,true),'ID: '+id,'form-modal');});
+  }
   function openView(id){
     const r=_data.find(x=>x['ID']===id);if(!r)return;
     const sec=(ic,tl,rows)=>'<div style="margin-bottom:20px"><div class="sdiv">'+ic+' '+tl+'</div>'+
@@ -1070,29 +1198,135 @@ const HIRING=(function(){
   
   // Bulk features (Placeholders for mapping)
   function openImport() {
-    const html = `<div style="text-align:center; padding: 20px;">
-      <p style="margin-bottom:15px; color:var(--n5);">Upload candidates via CSV or Google Sheets.</p>
-      <div style="display:flex; justify-content:center; gap: 15px;">
-        <button class="btn btn-s" onclick="alert('CSV mapping UI to be implemented.')">Upload CSV</button>
-        <button class="btn btn-s" onclick="alert('Google Sheet mapping UI to be implemented.')">Import Google Sheet</button>
-      </div>
-    </div><div class="mfoot"><button class="btn btn-s" onclick="APP.forceClose()">Cancel</button></div>`;
-    APP.openModal('Import Candidates', html, 'Map headers to system headers');
+    const html = `<div class="step-card">
+      <div class="step-head"><strong>Step 1 — Select Target</strong><span class="zoom-badge">Add Candidate Headers</span></div>
+      <div class="step-body"><div class="hint-box">Expected headers: ${IMPORT_HEADERS.join(', ')}</div></div>
+    </div>
+    <div class="step-card" style="margin-top:16px">
+      <div class="step-head"><strong>Step 2 — Upload File</strong><div class="import-tabs"><button class="import-tab active" id="it_csv" onclick="HIRING.setImportMode('csv')">CSV</button><button class="import-tab" id="it_sheet" onclick="HIRING.setImportMode('sheet')">Google Sheet</button></div></div>
+      <div class="step-body"><div id="importSource"></div><div id="importMap" style="margin-top:16px"></div><div id="importValidation" style="margin-top:16px"></div></div>
+    </div>
+    <div class="mfoot"><button class="btn btn-s" onclick="APP.forceClose()">Cancel</button><button class="btn btn-p" onclick="HIRING.uploadImport()">Upload Data</button></div>`;
+    APP.openModal('Upload Data', html, 'CSV or Google Sheet mapping', 'form-modal');
+    setImportMode('csv');
+  }
+
+  function setImportMode(mode){
+    _import={mode:mode,headers:[],rows:[]};
+    document.getElementById('it_csv')?.classList.toggle('active',mode==='csv');
+    document.getElementById('it_sheet')?.classList.toggle('active',mode==='sheet');
+    const source=document.getElementById('importSource');
+    if(mode==='csv')source.innerHTML='<label class="dropzone">Click to choose CSV from desktop<input id="importFile" type="file" accept=".csv" onchange="HIRING.readCsv(event)"></label>';
+    else source.innerHTML='<div class="fgrid"><div class="fg full"><div class="flbl">Google Sheet Link / Sheet ID</div><input id="importSheetLink" class="finp" placeholder="Paste Google Sheet link or sheet ID"></div><div class="fg"><button type="button" class="btn btn-s" onclick="HIRING.fetchSheet()">Read Sheet</button></div></div>';
+    document.getElementById('importMap').innerHTML='';
+    document.getElementById('importValidation').innerHTML='';
+  }
+
+  function _parseCsv(text){
+    const rows=[];let row=[],cur='',inQuotes=false;
+    for(let i=0;i<text.length;i++){const ch=text[i],next=text[i+1];
+      if(ch==='"'){if(inQuotes&&next==='"'){cur+='"';i++;}else inQuotes=!inQuotes;}
+      else if(ch===','&&!inQuotes){row.push(cur);cur='';}
+      else if((ch==='\n'||ch==='\r')&&!inQuotes){if(ch==='\r'&&next==='\n')i++;row.push(cur);if(row.some(v=>String(v).trim()))rows.push(row);row=[];cur='';}
+      else cur+=ch;
+    }
+    row.push(cur);if(row.some(v=>String(v).trim()))rows.push(row);return rows;
+  }
+
+  function readCsv(event){
+    const file=event.target.files[0];if(!file)return;
+    const reader=new FileReader();
+    reader.onload=function(e){const parsed=_parseCsv(e.target.result||'');_import.headers=(parsed[0]||[]).map(v=>String(v).trim());_import.rows=parsed.slice(1).filter(r=>r.some(v=>String(v).trim()));renderImportMap(file.name);};
+    reader.readAsText(file);
+  }
+
+  function fetchSheet(){
+    const link=document.getElementById('importSheetLink').value.trim();
+    if(!link){APP.toast('Paste a Google Sheet link first.','err');return;}
+    google.script.run.withSuccessHandler(function(res){if(!res.ok){APP.toast(res.msg,'err');return;}_import.headers=res.headers||[];_import.rows=res.rows||[];renderImportMap(res.sourceName||'Google Sheet');}).withFailureHandler(function(e){APP.toast(e.message,'err');}).fetchGoogleSheetPreview(link);
+  }
+
+  function _normalizeHeader(v){return String(v||'').toLowerCase().replace(/[^a-z0-9]/g,'');}
+  function renderImportMap(sourceName){
+    const headers=_import.headers||[];
+    const auto={};IMPORT_HEADERS.forEach(h=>auto[h]=headers.find(f=>_normalizeHeader(f)===_normalizeHeader(h))||'');
+    const opts='<option value="">— Not Mapped —</option>'+headers.map(h=>'<option>'+h+'</option>').join('');
+    document.getElementById('importMap').innerHTML='<div class="step-card"><div class="step-head"><strong>Step 3 — Verify Header Mapping</strong><span class="zoom-badge">'+sourceName+'</span></div><div class="step-body">'+IMPORT_HEADERS.map(h=>'<div class="mapping-row" style="margin-bottom:10px"><input class="finp" readonly value="'+h+'"><div>→</div><select class="finp import-map" data-expected="'+h+'">'+opts.replace('<option>'+auto[h]+'</option>','<option selected>'+auto[h]+'</option>')+'</select></div>').join('')+'</div></div>';
+    document.getElementById('importValidation').innerHTML='<div class="hint-box">Rows detected: '+_import.rows.length+'. Auto mapping is applied where file headers match expected headers.</div>';
+  }
+
+  function uploadImport(){
+    if(!_import.rows.length){APP.toast('Upload a CSV or read a Google Sheet first.','err');return;}
+    const map={};document.querySelectorAll('.import-map').forEach(el=>map[el.dataset.expected]=el.value);
+    const errors=[];const records=_import.rows.map((row,rowIndex)=>{const obj={};IMPORT_HEADERS.forEach(h=>{const idx=_import.headers.indexOf(map[h]);obj[h]=idx>=0?(row[idx]||''):'';});obj['Alt Contact Number']=obj['Alt Contact Number']||'';if(!obj['Req ID']||!obj['Vendor Name']||!obj['Hiring Date']||!obj['Full Name']||!obj['First Name']||!obj['Last Name']||!obj['Contact Number']||!obj['Personal Gmail ID']||!obj['Work Experience'])errors.push('Row '+(rowIndex+2)+': fill all required mapped values.');if(obj['Contact Number']&&String(obj['Contact Number']).replace(/\\D/g,'').length!==10)errors.push('Row '+(rowIndex+2)+': Contact Number must be 10 digits.');if(obj['Alt Contact Number']&&String(obj['Alt Contact Number']).replace(/\\D/g,'').length!==10)errors.push('Row '+(rowIndex+2)+': Alt Contact Number must be 10 digits.');if(obj['Personal Gmail ID']&&!APP.validateEmail(obj['Personal Gmail ID']))errors.push('Row '+(rowIndex+2)+': Personal Gmail ID must be valid.');return obj;});
+    const validation=document.getElementById('importValidation');
+    if(errors.length){validation.innerHTML='<div class="validation-list">'+errors.map(v=>'<div>'+v+'</div>').join('')+'</div>';return;}
+    validation.innerHTML='<div class="hint-box">Validation passed. Uploading records…</div>';
+    google.script.run.withSuccessHandler(function(res){if(!res.ok){validation.innerHTML='<div class="validation-list">'+(res.errors||[res.msg]).map(v=>'<div>'+v+'</div>').join('')+'</div>';return;}APP.toast(res.msg,'ok');APP.forceClose();load();}).withFailureHandler(function(e){APP.toast(e.message,'err');}).saveImportedCandidates({records:records},APP.getUser());
   }
 
   function openBulkUpdate() {
     const sel = document.querySelectorAll('.row-chk:checked');
     if(sel.length === 0) { APP.toast('Please select candidates first.', 'err'); return; }
-    
-    const html = `<div class="fgrid">
-      <div class="fg full"><div class="flbl">Bulk Action</div>
-        <select class="finp" id="bu_action">
-          <option value="">Select Phase to Update...</option>
-          <option>Interview</option><option>Training</option><option>Certification</option><option>Working from</option>
-        </select>
+    const rows=[...sel].map(s=>_data.find(r=>r['ID']===s.value)).filter(Boolean);
+    const html = `<div class="bulk-grid">
+      <div>
+        <div class="fg full"><div class="flbl">Bulk Action</div>
+          <select class="finp" id="bu_action" onchange="HIRING.renderBulkFields()">
+            <option value="">Select Phase to Update...</option>
+            <option>Interview</option><option>Training</option><option>Certification</option><option>Working from</option>
+          </select>
+        </div>
+        <div id="bulkCommon" style="margin-top:16px"></div>
       </div>
-    </div><div class="mfoot"><button class="btn btn-s" onclick="APP.forceClose()">Cancel</button><button class="btn btn-p" onclick="alert('Bulk backend update logic to be implemented.')">Apply to ${sel.length} Records</button></div>`;
-    APP.openModal('Multiple Update', html, 'Update multiple records at once');
+      <div class="bulk-list">
+        <div class="bulk-row" style="font-weight:700;background:var(--n9)"><div>Candidate</div><div>Status</div><div>Reason / Process</div></div>
+        ${rows.map(r=>`<div class="bulk-row">
+          <div><div class="bulk-name">${r['Full Name']}</div><div class="bulk-meta">${r['Vendor Name']} · ${r['ID']}</div></div>
+          <div id="bulk_status_${r['ID']}" class="bulk-status">Select phase</div>
+          <div id="bulk_extra_${r['ID']}" class="bulk-meta">Select a bulk action first.</div>
+        </div>`).join('')}
+      </div>
+    </div><div class="mfoot"><button class="btn btn-s" onclick="APP.forceClose()">Cancel</button><button class="btn btn-p" onclick="HIRING.applyBulk()">Apply to ${sel.length} Records</button></div>`;
+    APP.openModal('Multiple Update', html, 'Common fields + candidate-wise update');
+  }
+
+  function renderBulkFields(){
+    const phase=document.getElementById('bu_action')?.value||'';
+    const dv=APP.getDV();
+    const common=document.getElementById('bulkCommon');
+    const ids=[...document.querySelectorAll('.row-chk:checked')].map(c=>c.value);
+    const mk=arr=>'<option value="">Select…</option>'+(arr||[]).map(v=>'<option>'+v+'</option>').join('');
+    if(!phase||!common)return;
+    if(phase==='Interview')common.innerHTML='<div class="fgrid"><div class="fg"><div class="flbl">Interview Date</div><input id="bu_interviewDate" class="finp" type="date"></div><div class="fg"><div class="flbl">Interview By</div><input id="bu_interviewBy" class="finp"></div></div>';
+    if(phase==='Training')common.innerHTML='<div class="fgrid"><div class="fg"><div class="flbl">Training Date</div><input id="bu_trainingDate" class="finp" type="date"></div><div class="fg"><div class="flbl">Training By</div><input id="bu_trainingBy" class="finp"></div></div>';
+    if(phase==='Certification')common.innerHTML='<div class="fgrid"><div class="fg"><div class="flbl">Certified Date</div><input id="bu_certifiedDate" class="finp" type="date"></div><div class="fg"><div class="flbl">Certification By</div><input id="bu_certificationBy" class="finp"></div></div>';
+    if(phase==='Working from')common.innerHTML='<div class="fgrid"><div class="fg wf-field"><div class="flbl">Working from Date</div><input id="bu_workingFromDate" class="finp" type="date"></div></div>';
+    ids.forEach(id=>{
+      const status=document.getElementById('bulk_status_'+id),extra=document.getElementById('bulk_extra_'+id);
+      if(!status||!extra)return;
+      if(phase==='Interview'){status.innerHTML='<select class="finp bu-item-status" data-id="'+id+'">'+mk(dv.interviewStatus||[])+'</select>';extra.innerHTML='<textarea class="finp bu-item-reason" data-id="'+id+'" placeholder="Rejected reason"></textarea><select class="finp bu-item-process" data-id="'+id+'" style="margin-top:8px">'+mk(dv.selectedProcess||[])+'</select>';}
+      if(phase==='Training'){status.innerHTML='<select class="finp bu-item-status" data-id="'+id+'">'+mk(dv.trainingStatus||[])+'</select>';extra.innerHTML='<textarea class="finp bu-item-reason" data-id="'+id+'" placeholder="Dropout reason"></textarea>';}
+      if(phase==='Certification'){status.innerHTML='<select class="finp bu-item-status" data-id="'+id+'">'+mk(dv.certStatus||[])+'</select>';extra.innerHTML='<textarea class="finp bu-item-reason" data-id="'+id+'" placeholder="Not certified reason"></textarea>';}
+      if(phase==='Working from'){status.innerHTML='<span class="bdg b-green">Working from</span>';extra.innerHTML='Date will be common for all selected candidates.';}
+    });
+  }
+
+  function applyBulk(){
+    const phase=document.getElementById('bu_action')?.value||'';
+    const ids=[...document.querySelectorAll('.row-chk:checked')].map(c=>c.value);
+    if(!phase||!ids.length){APP.toast('Choose a bulk action first.','err');return;}
+    const common={
+      interviewDate:document.getElementById('bu_interviewDate')?.value||'',
+      interviewBy:document.getElementById('bu_interviewBy')?.value||'',
+      trainingDate:document.getElementById('bu_trainingDate')?.value||'',
+      trainingBy:document.getElementById('bu_trainingBy')?.value||'',
+      certifiedDate:document.getElementById('bu_certifiedDate')?.value||'',
+      certificationBy:document.getElementById('bu_certificationBy')?.value||'',
+      workingFromDate:document.getElementById('bu_workingFromDate')?.value||''
+    };
+    const items=ids.map(id=>({id:id,status:document.querySelector('.bu-item-status[data-id="'+id+'"]')?.value||'',reason:document.querySelector('.bu-item-reason[data-id="'+id+'"]')?.value||'',selectedProcess:document.querySelector('.bu-item-process[data-id="'+id+'"]')?.value||''}));
+    google.script.run.withSuccessHandler(function(res){if(!res.ok){APP.toast(res.msg,'err');return;}APP.toast(res.msg,'ok');APP.forceClose();load();}).withFailureHandler(function(e){APP.toast(e.message,'err');}).bulkUpdateHiringRecords({ids:ids,phase:phase,common:common,items:items},APP.getUser());
   }
 
   function tab(t){
@@ -1112,14 +1346,21 @@ const HIRING=(function(){
     clearTimeout(_acT[key]);
     const did='acd_'+key;
     if(!q||q.length<2){const d=document.getElementById(did);if(d)d.classList.remove('open');return;}
+    const loading=document.getElementById(key+'_loading');
+    const box=document.getElementById(did);
+    if(loading)loading.classList.remove('hidden');
+    if(box){box.innerHTML='<div class="acrow muted">Searching…</div>';box.classList.add('open');}
     _acT[key]=setTimeout(function(){
       google.script.run
         .withSuccessHandler(function(res){
+          if(loading)loading.classList.add('hidden');
           const d=document.getElementById(did);if(!d)return;
           d.innerHTML=res.results?.length?res.results.map(r=>'<div class="acrow" onclick="HIRING.acPick(\''+key+'\',\''+r.email+'\',\''+r.name.replace(/'/g,'')+'\')">'+'<strong>'+r.name+'</strong><small>'+r.email+'</small></div>').join(''):
             '<div class="acrow muted">No results. Type directly.</div>';
           d.classList.add('open');
-        }).searchPeople(q);
+        })
+        .withFailureHandler(function(){if(loading)loading.classList.add('hidden');})
+        .searchPeople(q);
     },300);
   }
   function acPick(key,email,name){
@@ -1146,6 +1387,13 @@ const HIRING=(function(){
       }).addDVOption('selectedProcess',val.trim(),APP.getUser());
   }
 
+  function validateMail(){
+    const input=document.getElementById('hf_gmail');
+    const hint=document.getElementById('hf_mail_hint');
+    if(!input||!hint)return;
+    hint.classList.toggle('hidden',!input.value||APP.validateEmail(input.value));
+  }
+
   function submit(){
     const g=id=>{const el=document.getElementById(id);return el?el.value.trim():'';};
     
@@ -1159,6 +1407,7 @@ const HIRING=(function(){
     if(!c || c.length!==10){APP.toast('Contact must be 10 digits','err');tab('h');return;}
     const alt=g('hf_alt');if(alt&&alt.length!==10){APP.toast('Alt Contact must be 10 digits','err');tab('h');return;}
     if(!g('hf_gmail')){APP.toast('Gmail ID required','err');tab('h');return;}
+    if(!APP.validateEmail(g('hf_gmail'))){APP.toast('Enter a valid Personal Gmail ID','err');tab('h');return;}
     
     let wexp=g('hf_wexp');if(!wexp){APP.toast('Work Experience required','err');tab('h');return;}
     if(wexp==='Experienced') {
@@ -1213,7 +1462,7 @@ const HIRING=(function(){
       .saveHiringRecord(rec,APP.getUser());
   }
 
-  return{load,filter,toggleMask,toggleDetails,toggleAll,goPage,openAdd,openEdit,openView,openImport,openBulkUpdate,tab,onVendor,onExp,prevExp,onISt,onTSt,onCSt,ac,acPick,openAddProc,confirmAddProc,submit};
+  return{load,filter,toggleMask,toggleDetails,toggleAll,goPage,openAdd,openEdit,openView,openImport,openBulkUpdate,renderBulkFields,applyBulk,setImportMode,readCsv,fetchSheet,uploadImport,tab,onVendor,onExp,prevExp,onISt,onTSt,onCSt,ac,acPick,openAddProc,confirmAddProc,validateMail,submit};
 })();
 </script>
 
@@ -1253,7 +1502,7 @@ const ADMIN=(function(){
           <input type="hidden" id="af_e" value="${email}"><div class="acdrop" id="acd_acc"></div></div></div>
       <div class="fg"><div class="flbl">Display Name</div><input class="finp" id="af_n" value="${name}" placeholder="Auto-filled or manual"></div>
       <div class="fg"><div class="flbl">Role<span class="req">*</span></div>
-        <select class="finp" id="af_r"><option value="">Select…</option>${['Admin','Supervisor'].map(v=>'<option'+(v===role?' selected':'')+'>'+v+'</option>').join('')}</select></div>
+        <select class="finp" id="af_r"><option value="">Select…</option>${['Admin','Supervisor','Vendor'].map(v=>'<option'+(v===role?' selected':'')+'>'+v+'</option>').join('')}</select></div>
       <div class="fg"><div class="flbl">Company<span class="req">*</span></div>
         <select class="finp" id="af_c"><option value="">Select…</option>${cos.map(c=>'<option'+(c===company?' selected':'')+'>'+c+'</option>').join('')}</select></div>
     </div><div class="mfoot"><button class="btn btn-s" onclick="APP.forceClose()">Cancel</button><button class="btn btn-p" onclick="ADMIN.saveAcc()">Save Access</button></div>`;
@@ -1309,7 +1558,8 @@ const ADMIN=(function(){
         document.getElementById('ubStats').innerHTML=
           '<div class="scard" style="--accent:#7C3AED"><div class="scard-ico">👥</div><div class="scard-val">'+s.total+'</div><div class="scard-lbl">Unique Users</div><div class="scard-bar"></div></div>'+
           '<div class="scard" style="--accent:#6D28D9"><div class="scard-ico">🛡</div><div class="scard-val">'+s.admin+'</div><div class="scard-lbl">Admins</div><div class="scard-bar"></div></div>'+
-          '<div class="scard" style="--accent:#059669"><div class="scard-ico">👤</div><div class="scard-val">'+s.supervisor+'</div><div class="scard-lbl">Supervisors</div><div class="scard-bar"></div></div>';
+          '<div class="scard" style="--accent:#059669"><div class="scard-ico">👤</div><div class="scard-val">'+s.supervisor+'</div><div class="scard-lbl">Supervisors</div><div class="scard-bar"></div></div>'+
+          '<div class="scard" style="--accent:#0F766E"><div class="scard-ico">🏢</div><div class="scard-val">'+(s.vendor||0)+'</div><div class="scard-lbl">Vendor Users</div><div class="scard-bar"></div></div>';
         
         _renderUB(_ub);
         if(document.getElementById('tc-ub-login').classList.contains('active')) _renderLogins(_ub);
